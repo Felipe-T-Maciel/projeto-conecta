@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     colors: {
       'sidebar':'#220424',
+      'white': '#FFFFFF'
     },
   },
   plugins: [],
