@@ -14,12 +14,17 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
     private resizeObserver !: ResizeObserver;
   
 
+
+
     ngAfterViewInit() {
+      const sidebarWidth = document.querySelector("#sidebar > div.pt-2.lg\\:pt-8");
+      
       this.resizeObserver = new ResizeObserver(entries => {
+
           for (let entry of entries) {
               const sidebarWidth = entry.contentRect.width;
               const windowWidth = window.innerWidth;
-  
+
               if ((sidebarWidth / windowWidth) * 100 >= 16) {
                   this.showText = true;
               } else {
@@ -44,7 +49,9 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
+
     if(this.widthPage >= 1024){
+      this.showText = false;
       this.menu = true;
     }else{
       this.menu = false
@@ -66,7 +73,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   menuOpen(){
     this.menu = !this.menu;
-    this.showText = true
+    this.showText = !this.showText
   }
 
 }
