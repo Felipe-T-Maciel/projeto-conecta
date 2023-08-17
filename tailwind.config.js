@@ -4,10 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    colors: {
-      'sidebar':'#220424',
-      'white': '#FFFFFF'
-    },
+    extend:{
+      colors: {
+        'sidebar':'#220424',
+        'white': '#FFFFFF'
+      },
+    }
   },
   plugins: [],
 }

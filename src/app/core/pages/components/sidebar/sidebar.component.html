@@ -1,20 +1,23 @@
-<div *ngIf="!menu" class="lg:hidden">
+<div  class="lg:hidden">
     <button (click)="menuOpen()" class="p-4 bg-blue-600 text-white">☰ Menu</button>
 </div>
 
-<div *ngIf="menu" [class.show-text]="showText" class="bg-sidebar w-3/5 lg:duration-300 hover:duration-300 hover:transition-all lg:block h-screen overflow-y-auto  lg:w-1/12 lg:hover:w-1/5" id="sidebar">
+<div [ngStyle]="{
+    'width': largura + '%'
+}" class="bg-sidebar w-3/5 lg:duration-300 hover:duration-300 hover:transition-all lg:block h-screen overflow-y-auto  lg:w-1/12 lg:hover:w-1/5" id="sidebar">
 
-    <div *ngIf="menu" class=" lg:hidden">
-        <button (click)="menuOpen()" class="p-4 bg-blue-600 text-white">☰ Menu</button>
+    <div class=" lg:hidden">
+        <button (click)="CloseSideBar()" class="p-4 bg-blue-600 text-white">☰ Menu</button>
     </div>
 
     <div class="pt-2 lg:pt-8">
+        
         <div class="w-full flex flex-col justify-center items-center">
             <span class="w-full flex justify-center">
                 <img src="../../../../../assets/imagens/logo.png" class="w-2/5 " alt="">
             </span>
             <span class="mb-10 w-full flex justify-center">
-                <h1 class="text-white" id="conecta-text-logo" *ngIf="showText">CONECTA</h1>
+                <h1 class="text-white" id="conecta-text-logo">CONECTA</h1>
             </span>
         </div>
     
@@ -24,9 +27,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                     </svg>
     
-                    <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;" *ngIf="showText"></div>
+                    <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;"></div>
     
-                    <p class="text-white ml-5 font-mono text-xl" *ngIf="showText">Home</p>
+                    <p class="text-white ml-5 font-mono text-xl">Home</p>
             </div>
     
             <div class="w-full flex items-center mb-6">
@@ -34,9 +37,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
                 
-                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;" *ngIf="showText"></div>
+                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;"></div>
     
-                <p class="text-white ml-5 font-mono text-xl" *ngIf="showText">Adicionar serviço</p>
+                <p class="text-white ml-5 font-mono text-xl">Adicionar serviço</p>
             </div>
     
             <div class="w-full flex items-center mb-6">
@@ -47,9 +50,9 @@
     
                   
                 
-                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;" *ngIf="showText"></div>
+                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;"></div>
     
-                <p class="text-white ml-5 font-mono text-xl" *ngIf="showText" >Configurações</p>
+                <p class="text-white ml-5 font-mono text-xl" >Configurações</p>
             </div>
     
             <div class="w-full flex items-center mb-6">
@@ -57,9 +60,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
                 
-                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;" *ngIf="showText"></div>
+                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;"></div>
     
-                <p class="text-white ml-5 font-mono text-xl" *ngIf="showText">Adicionar serviço</p>
+                <p class="text-white ml-5 font-mono text-xl">Adicionar serviço</p>
             </div>
     
             <div class="w-full flex items-center mb-3">
@@ -67,9 +70,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
                 
-                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;" *ngIf="showText"></div>
+                <div class="h-4rem ml-2 w-1 bg-white rounded-sm" style="height: 2rem;"></div>
     
-                <p class="text-white ml-5 font-mono text-xl" *ngIf="showText">Adicionar serviço</p>
+                <p class="text-white ml-5 font-mono text-xl">Adicionar serviço</p>
             </div>
         </div>
     </div>
