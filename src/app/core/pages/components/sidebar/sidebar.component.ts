@@ -5,19 +5,46 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, 
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit{  
-  constructor(){}
-  ngOnInit(): void {
-    this.largura = 0
+export class SidebarComponent implements OnInit {
+  constructor() { }
+  largura: number = 8
+
+
+  sideBar() {
+    if (this.largura == 0) {
+      this.largura = 70
+    } else {
+      this.largura = 0
+    }
   }
 
-  largura: number = 0
-  menuOpen(){
-    this.largura = 16
+  hovered: boolean = false
+
+  onMouseOver() {
+    this.hovered = true;
   }
 
-  CloseSideBar(){
-    this.largura = 0
+  onMouseOut() {
+    this.hovered = false;
   }
 
+
+  screenWidth?: number;
+
+ 
+
+  ngOnInit() {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize() {
+    this.screenWidth = window.innerWidth;
+
+    if(this.screenWidth >= 1024){
+      this.largura = 8
+    }
+    else{
+      this.largura = 0
+    }
+  }
 }
