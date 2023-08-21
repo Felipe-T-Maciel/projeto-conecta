@@ -7,44 +7,61 @@ import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, 
 })
 export class SidebarComponent implements OnInit {
   constructor() { }
-  largura: number = 8
+  largura: number = this.getScreenSize()
+
+  revela: boolean = false
+
+  md: boolean = false
 
 
   sideBar() {
     if (this.largura == 0) {
       this.largura = 70
+      this.revela = true
     } else {
       this.largura = 0
+      this.revela = false
     }
   }
 
   hovered: boolean = false
 
   onMouseOver() {
-    this.hovered = true;
+    if(this.md){
+      this.hovered = true;
+      this.revela = true
+    }
   }
 
   onMouseOut() {
     this.hovered = false;
+    if(this.md){
+      this.revela = false
+    }
   }
 
 
   screenWidth?: number;
 
- 
-
   ngOnInit() {
+    this.getScreenSize()
+    
   }
 
   @HostListener('window:resize', ['$event'])
   getScreenSize() {
     this.screenWidth = window.innerWidth;
+    this.revela = false
 
     if(this.screenWidth >= 1024){
       this.largura = 8
+      this.md = true
     }
     else{
       this.largura = 0
+      this.md = false
     }
+
+    return this.largura
   }
 }
