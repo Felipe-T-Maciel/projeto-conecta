@@ -7,7 +7,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding-top: 10%;
 }
 
 
@@ -16,4 +15,14 @@
 
 p{
     font-family: 'Hind Guntur', sans-serif;
+}
+
+.visible {
+    display: block;
+    transition: 0.8s;
+}
+
+.hidden {
+    display: none;
+    transition: 8s;
 }

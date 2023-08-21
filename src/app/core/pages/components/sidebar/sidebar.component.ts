@@ -54,7 +54,7 @@ export class SidebarComponent implements OnInit {
     this.revela = false
 
     if(this.screenWidth >= 1024){
-      this.largura = 8
+      this.largura = 6
       this.md = true
     }
     else{
