@@ -13,10 +13,10 @@ export class SidebarComponent implements OnInit {
 
   md: boolean = false
 
-
+  
   sideBar() {
     if (this.largura == 0) {
-      this.largura = 70
+      this.largura = 20
       this.revela = true
     } else {
       this.largura = 0
@@ -50,11 +50,12 @@ export class SidebarComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenSize() {
+    console.log(this.screenWidth)
     this.screenWidth = window.innerWidth;
     this.revela = false
 
     if(this.screenWidth >= 1024){
-      this.largura = 6
+      this.largura = 7
       this.md = true
     }
     else{

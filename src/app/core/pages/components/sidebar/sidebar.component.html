@@ -1,13 +1,14 @@
-<div class="overflow-hidden">
-    <div class="w-1/12 flex justify-center rounded-xl absolute m-5 ml-8 p-1 bg-gray-700 z-1 md:hidden">
+<div class="overflow-hidden h-screen absolute">
+    
+    <div class="w-1/12 flex justify-center rounded-xl fixed m-5 ml-8 p-1 bg-gray-700 z-1 xl:hidden">
         <img src="https://www.clipartmax.com/png/middle/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png"
             (click)="sideBar()" alt="">
     </div>
 
 
     <div (mouseover)="onMouseOver()" (mouseout)="onMouseOut()"
-        [ngStyle]="hovered ? {'width': 16 + '%'} : {'width': largura + '%'}"
-        class=" bg-[#220424] z-0 h-[100vh] duration-[0.35s] border-r-4 overflow-hidden" id="sideBar">
+        [ngStyle]="hovered ? {'width': 20 + 'rem'} : {'width': largura + 'rem'}"
+        class=" bg-[#220424] z-0 h-full duration-300 border-r-4 overflow-hidden" id="sideBar">
 
         <div class="flex flex-col items-center overflow-hidden">
             <div class="flex justify-center pt-5">
