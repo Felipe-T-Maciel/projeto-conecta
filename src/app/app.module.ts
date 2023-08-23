@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './core/pages/components/sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './core/pages/home/home.component';
+import { AdicionarServicoComponent } from './core/pages/adicionar-servico/adicionar-servico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    AdicionarServicoComponent
   ],
   imports: [
     BrowserModule,

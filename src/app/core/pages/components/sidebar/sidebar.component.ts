@@ -50,7 +50,6 @@ export class SidebarComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenSize() {
-    console.log(this.screenWidth)
     this.screenWidth = window.innerWidth;
     this.revela = false
 
