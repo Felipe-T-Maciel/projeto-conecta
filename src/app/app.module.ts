@@ -7,13 +7,15 @@ import { SidebarComponent } from './core/pages/components/sidebar/sidebar.compon
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './core/pages/home/home.component';
 import { AdicionarServicoComponent } from './core/pages/adicionar-servico/adicionar-servico.component';
+import { PerfilComponent } from './core/pages/perfil/perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     HomeComponent,
-    AdicionarServicoComponent
+    AdicionarServicoComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
