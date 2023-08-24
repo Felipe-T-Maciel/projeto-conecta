@@ -1,9 +1,9 @@
 <div class="w-screen">
-    <div class="flex-col w-full pt-12 xl:pt-8">
+    <div class="flex-col w-full pt-20 xl:pt-16">
         <div class="flex justify-center">
             <p class="text-xl right-3 xl:text-4xl text-white">Adicionar um serviço parceiro</p>
         </div>
-        <div class="flex justify-center items-center pt-16">
+        <div class="flex justify-center items-center pt-10">
             <div class="flex justify-center w-[5rem]">
                 <i (click)="move(-1)" class="pi pi-arrow-left text-xl xl:text-5xl duration-150 xl:hover:text-6xl hover:text-2xl cursor-pointer"></i>
             </div>
@@ -11,7 +11,7 @@
                 <ng-container *ngFor="let image of images; let i = index">
                     <div 
                         [ngClass]="{'scale-110': i === currentIndex}" 
-                        class="w-[4rem] xl:w-[10rem] xl:h-[10rem] rounded-full overflow-hidden bg-black transition-transform duration-300">
+                        class="w-[4rem] hover:scale-110 xl:w-[10rem] xl:h-[10rem] rounded-full overflow-hidden bg-black transition-transform duration-300">
                         <img [src]="image" class=" w-full h-full object-cover">
                     </div>
                 </ng-container>
@@ -32,7 +32,7 @@
                 <ng-container *ngFor="let image of imagesAparte; let i = index">
                     <div 
                         [ngClass]="{'scale-110': i === currentIndexAparte}" 
-                        class=" w-[4rem] xl:w-[10rem] xl:h-[10rem] rounded-full overflow-hidden bg-black transition-transform duration-300">
+                        class=" w-[4rem] hover:scale-110 xl:w-[10rem] xl:h-[10rem] rounded-full overflow-hidden bg-black transition-transform duration-300">
                         <img [src]="image" class=" w-full h-full object-cover">
                     </div>
                 </ng-container>

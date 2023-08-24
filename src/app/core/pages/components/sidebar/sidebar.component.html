@@ -1,8 +1,8 @@
 <div class="overflow-hidden h-screen absolute" style="z-index: 9999;">
     
-    <div class="w-1/12 flex justify-center rounded-xl fixed m-5 ml-8 p-1 bg-gray-700 z-1 xl:hidden">
-        <img src="https://www.clipartmax.com/png/middle/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png"
-            (click)="sideBar()" alt="">
+    <div class="w-1/12 flex justify-center fixed rounded-xl m-5 ml-8 p-1 z-1 xl:hidden">
+            <i *ngIf="!largura" class="pi pi-bars text-xl text-white" (click)="sideBar()"></i>
+            <i *ngIf="largura" class="pi pi-times text-xl text-white" (click)="sideBar()"></i>
     </div>
 
 
